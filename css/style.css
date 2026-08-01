@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --primary:#2563EB;
+    --gauge-color:#2563EB;
+    --background:#F8FAFC;
+    --surface:#FFFFFF;
+
+    --text:#111827;
+    --text-light:#64748B;
+
+    --border:#E5E7EB;
+
+    --radius:20px;
+
+}
+
+body{
+
+    font-family:"Lexend",sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    line-height:1.6;
+
+}
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.container{
+
+    width:100%;
+
+    max-width:430px;
+
+    margin:50px auto;
+
+    padding:20px;
+
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+
+    text-align:center;
+
+    margin-bottom:28px;
+
+}
+
+.header h1{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+.subtitle{
+
+    margin-top:6px;
+
+    color:var(--text-light);
+
+    font-size:15px;
+
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.card{
+
+    background:var(--surface);
+
+    transition:.25s ease;
+
+    border-radius:24px;
+
+    padding:28px;
+
+    box-shadow:0 14px 40px rgba(15,23,42,.08);
+
+}
+
+.card:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-group{
+
+    margin-bottom:20px;
+
+}
+
+label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    font-family:"Lexend",sans-serif;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.2s;
+
+}
+
+input:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.button-group{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:24px;
+
+}
+
+button{
+
+    flex:1;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    cursor:pointer;
+
+    font-family:"Lexend",sans-serif;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.2s;
+
+}
+
+#calculateBtn{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+#calculateBtn:hover{
+
+    background:#1D4ED8;
+
+}
+
+#resetBtn{
+
+    background:#EEF2F7;
+
+}
+
+#resetBtn:hover{
+
+    background:#E2E8F0;
+
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:480px){
+
+    .container{
+
+        margin:25px auto;
+
+        padding:15px;
+
+    }
+
+    .card{
+
+        padding:22px;
+
+    }
+
+}
+
+/* =========================================================
+   INPUT ERROR
+========================================================= */
+
+.input-error{
+
+    display:block;
+
+    margin-top:6px;
+
+    min-height:18px;
+
+    font-size:13px;
+
+    color:#EF4444;
+
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer{
+
+    margin-top:40px;
+
+    text-align:center;
+
+}
+
+.footer p{
+
+    margin:0;
+
+    font-size:13px;
+
+    color:#94A3B8;
+
+}
+
+.footer strong{
+
+    display:block;
+
+    margin-top:6px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:#2563EB;
+
+    letter-spacing:1px;
+
+}

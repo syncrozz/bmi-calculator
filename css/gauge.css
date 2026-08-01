@@ -1,0 +1,229 @@
+/* =========================================================
+   GAUGE CARD
+========================================================= */
+
+.gauge-card{
+
+    margin-bottom:30px;
+
+    text-align:center;
+
+    transition:.35s ease;
+
+}
+
+/* =========================================================
+   GAUGE
+========================================================= */
+
+.gauge{
+
+    position:relative;
+
+    width:220px;
+
+    height:220px;
+
+    margin:auto;
+
+}
+
+.gauge-svg{
+
+    width:220px;
+
+    height:220px;
+
+    transform:rotate(-90deg);
+
+}
+
+.gauge-bg{
+
+    fill:none;
+
+    stroke:#E5E7EB;
+
+    stroke-width:16;
+
+}
+
+#gaugeProgress{
+
+    fill:none;
+
+    stroke:var(--gauge-color);
+
+    stroke-width:16;
+
+    stroke-linecap:round;
+
+    stroke-dasharray:100;
+
+    stroke-dashoffset:100;
+
+    transition:
+        stroke-dashoffset .8s cubic-bezier(.22,1,.36,1),
+        stroke .35s ease;
+
+}
+
+.gauge-svg{
+
+    overflow:visible;
+
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.gauge-content{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.gauge-label{
+
+    font-size:12px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    color:#94A3B8;
+
+    margin-bottom:10px;
+
+}
+
+#bmiValue{
+
+    font-size:58px;
+
+    font-weight:700;
+
+    line-height:1;
+
+    color:#111827;
+
+}
+
+#bmiCategory{
+
+    margin-top:12px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:var(--gauge-color);
+
+}
+
+#bmiDescription{
+
+    margin-top:20px;
+
+    max-width:300px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+    color:#64748B;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+/* =========================================================
+   BMI SCALE
+========================================================= */
+
+.bmi-scale{
+
+    margin-top:28px;
+
+}
+
+.scale-bar{
+
+    position:relative;
+
+    width:100%;
+
+    height:8px;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        to right,
+        #3B82F6 0%,
+        #22C55E 35%,
+        #F59E0B 65%,
+        #EF4444 100%
+    );
+
+}
+
+.scale-marker{
+
+    position:absolute;
+
+    top:50%;
+
+    left:0;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:#FFFFFF;
+
+    border:4px solid var(--gauge-color);
+
+    transform:translate(-50%, -50%);
+
+    transition:left .8s cubic-bezier(.22,1,.36,1);
+
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+
+}
+
+.scale-labels,
+
+.scale-categories{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:10px;
+
+    font-size:12px;
+
+    color:#64748B;
+
+}
+
+.scale-categories{
+
+    font-weight:600;
+
+}
